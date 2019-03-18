@@ -1,0 +1,413 @@
+/*Reset*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Georgia, serif;
+	color: #252525;
+
+} 
+
+.container {
+	display: flex;
+	max-width: 960px;
+	margin: 0 auto;
+	
+}
+
+@media (max-width: 739px) {
+	.container {
+		flex-direction: column;
+		max-width: 300px;
+	}
+}
+
+/*Menu*/
+
+.menu {
+	background: #252525;
+	padding: 15px 0;
+	
+}
+.menu-nav a {
+		
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.125em;
+}
+
+.menu-nav a:hover {
+	background: #fff;
+	color: #252525;
+}
+
+.menu-logo {
+	margin: 0 10px;
+}
+
+.menu-nav {
+	flex: 1;
+	margin: 0 10px;
+	align-self: center;
+
+}
+
+
+.menu-nav ul {
+	float: right;
+	display: flex; 
+	list-style: none;
+}
+
+.menu-nav ul li a {
+	padding: 10px;
+}
+
+@media (max-width: 739px) {
+	.menu-nav {
+		margin: 15px 0 0 0;
+	}
+	.menu-logo {
+		margin: 0;
+	}
+	.menu-nav ul li a {
+		padding-left: 0;
+	}
+}
+
+/*Intro*/
+.intro {
+	background: url('../img/bg-intro.jpg') no-repeat center center;
+	background-size: cover; /*ele sempre ficará 100%, responsivo*/
+	padding: 150px 0;
+	text-align: center;
+	color: #fff;
+}
+
+@media (max-width: 739px) {
+	.intro {
+		padding: 60px 0;
+	}
+}
+
+.intro h1 {
+	text-transform: uppercase;
+	font-size: 3em;
+}
+
+/*criando um traço com o pseudo element*/
+.intro h1::after {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 4px;
+	background: #fff;
+	margin: 10px auto;
+
+}
+
+.intro p {
+	font-style: italic;
+	font-size: 1.125em;
+}
+
+/*Sobre*/
+
+.sobre {
+	padding: 60px 0;
+}
+
+.sobre h2 {
+	text-align: center;
+	font-size: 2.25em;
+	margin-bottom: 60px;
+}
+
+.sobre-item {
+	flex: 1;
+	margin: 0 10px;
+}
+
+@media (max-width: 739px) {
+	.sobre-item {  
+		margin-left: 0;
+		margin-right: 0;
+	} 
+}	
+
+/* transformando a imagem em responsiva*/
+.sobre-item img {
+	display: block;
+	max-width: 100%;
+}
+
+.sobre-item h3 {
+	font-size: 2.25em;
+	line-height: 1em;
+	background: #252525;
+	width: 220px;
+	color: #fff;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0 10px 0;
+	position: relative;
+	top: -25px;
+}
+
+.sobre > p {
+	font-size: 1.125em;
+	line-height: 1.4em;
+	font-style: italic;
+	text-align: center;
+	margin: 20px auto;
+	max-width: 460px;
+}
+
+/*Produtos*/
+
+.produtos {
+	background: #e7e4d8;
+	padding: 60px 0;
+	border-top: 3px solid #d6d3c8;
+	border-bottom: 3px solid #d6d3c8;
+}
+
+.produtos-item {
+	flex: 1;
+	margin: 0 10px 40px 10px;
+}
+
+.produtos-item h2 {
+	text-align: center;
+	font-size: 2.25em;
+	margin-bottom: 20px;
+}
+
+.produtos-item h2::before {
+	content: '';
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: currentColor;
+	border-radius: 50%;
+	margin: 20px auto;
+	border: 5px solid #e7e4d8;
+	box-shadow: 0 0 0 8px currentColor;
+}
+
+h2.produtos-paulista::before {
+	color: #492901;
+}
+
+h2.produtos-carioca::before {
+	color: #c17139;
+}
+
+h2.produtos-mineiro::before {
+	color: #d7a54d;
+}
+
+.produtos-item p {
+	font-size: 0.875em;
+	line-height: 1.4em;
+}
+
+.produtos-btn {
+	width: 180px;
+	border: 3px solid #252525;
+	color: #252525;
+	text-decoration: none;
+	display: block; /* por como block, senão o width nao funcionará*/
+	text-align: center;
+	font-size: 1.125em;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 15px 0;
+	margin: 20px auto 0 auto;
+}
+
+.produtos-btn:hover {
+	color: #e7e4d8;
+	background: #252525;
+}
+
+@media (max-width: 739px) {
+	.produtos-item {
+		margin-left: 0;
+		margin-right: 0;
+	} 
+}	
+/*Locais*/
+
+.locais {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.locais-item {
+		margin:60px auto;
+}
+
+.locais-img, .locais-info {
+	flex: 1;
+	margin: 0 10px;
+}
+
+.locais-img img{
+	display: block;
+	max-width: 100%;
+}
+
+.locais-item h2 {
+	font-size: 2.25em;
+	margin-bottom: 20px;
+}
+
+.locais-item p {
+	font-size: 1.125em;
+	line-height: 1.4em;
+	max-width: 320px;
+	margin-bottom: 40px;
+
+}
+
+.locais-item a {
+	font-size: 1.125em;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 3px solid;
+	color: #252525;
+	padding: 10px 20px;
+}
+
+.locais-item a:hover {
+	color: #e7e4d8;
+	background: #252525;
+}
+
+@media (max-width: 739px) {
+	.locais-img, .locais-info {
+		margin-left: 0;
+		margin-right: 0;
+	} 
+}	
+
+/*Assine*/
+
+.assine {
+	background: #e7e4d8;
+	padding: 30px 0;
+}
+
+.assine-info {
+	flex 1;
+	margin: 0 10px;
+}
+
+@media (max-width: 739px) {
+	.assine-info {
+		margin: 0 0 40px 0;
+	}
+	.assine form {
+		margin: 0;
+
+	}
+}	
+
+.assine-info h2 {
+	font-size: 2.25em;
+}
+
+.assine-info p {
+	font-size: 1.5em;
+	font-style: italic;
+}
+
+.assine form {
+	flex: 1;
+	margin: 0 10px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	
+}
+
+.assine form label {
+	display: none;
+}
+
+@media (max-width: 739px) {
+	.assine-info {
+		margin: 0 0 20px 0;
+	}
+	.assine form {
+		margin: 0;
+	}
+}
+
+.assine input {
+	flex: 1;
+	align-self: flex-start;
+	box-sizing: border-box;
+	border: 3px solid #252525;
+	background: none;
+	font-size: 1.5em;
+	font-style: italic;
+	font-family: Georgia, serif; /*formulario nao herda a tipografia do body*/
+	padding: 10px;
+	float: left;
+}
+
+.assine button {
+	flex: 1;
+	align-self: flex-start;
+	background: #252525;
+	border: none;
+	font-family: Georgia, serif;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	width: 140px;
+	padding: 13px 0;
+	color: #fff;
+	cursor: pointer;
+}
+
+/*Footer*/
+.footer {
+	background: #d6d3c8;
+	padding: 40px 0;
+}
+
+.footer-container::after, .footer-container::before {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.footer p {
+	float: left;
+	margin:0 10px;
+	font-size: 1.125em;
+	line-height: 1.4em;
+	flex: 1;
+}
+
+.footer-img {
+	float: right;
+	margin:0 10px;
+	display: block;
+
+}
+
+@media (max-width: 739px) {
+	.footer-img, .footer p {
+		margin: 10px 0;
+	} 
+}	
+
+
